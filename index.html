@@ -4,84 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Fauget Company</title>
 </head>
 <body>
     <div class="main">
         <nav>
             <div class="logo">
-                <img src="logo.png">
+                <img src="Untitled design (1).png" alt="Fauget Company Logo">
             </div>
             <div class="nav-links">
                 <ul>
-                    <li><a href="#">Home</a> </li>
-                    <li><a href="#">Phone</a> </li>
-                    <li><a href="#">Accessories</a> </li>
-                    <li><a href="#">Cart</a> </li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </nav>
         <div class="information">
             <div class="overlay"></div>
-            <img src="mobile.png" class="mobile">
+            <img src="laptop-with-colorful-screen-isolated-white-background-3d-illustration.png" class="mobile" alt="MacBook Display">
             <div id="circle">
                 <div class="feature one">
-                    <img src="camera.png">
+                    <img src="camera.png" alt="Camera Icon">
                     <div>
-                        <hi>Camera</hi>
+                        <h3>Camera</h3>
                         <p>12MP, Wide Angle Lens</p>
                     </div>
                 </div>
                 <div class="feature two">
-                    <img src="processor.png">
+                    <img src="processor.png" alt="Processor Icon">
                     <div>
-                        <hi>Processor</hi>
-                        <p>Snapdragon Octa-core 11nm</p>
+                        <h3>Processor</h3>
+                        <p>Quad-core Intel Core i7</p>
                     </div>
                 </div>
                 <div class="feature three">
-                    <img src="display.png">
+                    <img src="display.png" alt="Display Icon">
                     <div>
-                        <hi>Display</hi>
-                        <p>6.5" Mini-Drop Fullscreen</p>
+                        <h3>Display</h3>
+                        <p>14.2” (36.1 cm) diagonal Fullscreen</p>
                     </div>
                 </div>
                 <div class="feature four">
-                    <img src="battery.png">
+                    <img src="battery.png" alt="Battery Icon">
                     <div>
-                        <hi>Battery</hi>
-                        <p>5000mAh, 720Hrs Standby</p>
+                        <h3>Battery</h3>
+                        <p>5,103 mAh, 720Hrs Standby</p>
                     </div>
                 </div>
             </div>
         </div>
-
         <div class="controls">
-            <img src="arrow.png" id="UpBtn">
+            <img src="arrow.png" id="UpBtn" alt="Up Button">
             <h3>Features</h3>
-            <img src="arrow.png" id="downBtn"> 
+            <img src="arrow.png" id="downBtn" alt="Down Button"> 
         </div>
     </div>
-
     <script>
         var circle = document.getElementById("circle");
         var UpBtn = document.getElementById("UpBtn");
         var downBtn = document.getElementById("downBtn");
 
-        var rotateValue = circle.style.transform;
-        var rotateSum;
+        var rotateValue = 0;
 
-        UpBtn.onclick = function()
-        {
-            rotateSum = rotateValue + "rotate(-90deg)";
-            circle.style.transform = rotateSum;
-            rotateValue = rotateSum;
+        UpBtn.onclick = function() {
+            rotateValue -= 90;
+            circle.style.transform = "rotate(" + rotateValue + "deg)";
         }
-        downBtn.onclick = function()
-        {
-            rotateSum = rotateValue + "rotate(-90deg)";
-            circle.style.transform = rotateSum;
-            rotateValue = rotateSum;
+
+        downBtn.onclick = function() {
+            rotateValue += 90;
+            circle.style.transform = "rotate(" + rotateValue + "deg)";
         }
     </script>
 </body>
